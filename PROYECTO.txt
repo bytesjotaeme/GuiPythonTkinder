@@ -1,0 +1,22 @@
+nombre de la base de datos base_datos1.db
+
+CREATE TABLE IF NOT EXISTS datos (
+    ID INTEGER PRIMARY KEY,
+    NOMBRE TEXT,
+    EDAD NUMERIC,
+    CORREO TEXT,
+    dias_horarios_pedidos TEXT,
+    horarios_reparto TEXT,
+    productos_servicios TEXT,
+    fecha_ingreso DATE,
+    cantidad_pedidos INTEGER,
+    precio REAL
+);
+
+
+INSERT INTO datos (NOMBRE, EDAD, CORREO, TELEFONO, dias_horarios_pedidos, horarios_reparto, productos_servicios, fecha_ingreso, cantidad_pedidos, precio) VALUES
+    ('Goku', 35, 'goku@example.com', 123456789, 'Lunes a viernes, 9am-5pm', 'Lunes a sábado, 8am-6pm', 'Kamehameha', '2022-01-01', 10, 50.00),
+    ('Naruto', 30, 'naruto@example.com', 987654321, 'Lunes a sábado, 8am-6pm', 'Lunes a viernes, 10am-4pm', 'Rasengan', '2022-02-15', 5, 75.00),
+    ('Luffy', 19, 'luffy@example.com', 111222333, 'Martes y jueves, 10am-2pm', 'Lunes a sábado, 9am-7pm', 'Gomu Gomu no Pistol', '2022-03-10', 15, 100.00),
+    ('Sakura', 28, 'sakura@example.com', 555666777, 'Lunes a viernes, 8am-4pm', 'Lunes a sábado, 9am-5pm', 'Puño de fuerza', '2022-04-20', 8, 60.00),
+    ('Ichigo', 17, 'ichigo@example.com', 999888777, 'Miércoles y viernes, 11am-3pm', 'Lunes a viernes, 8am-6pm', 'Getsuga Tensho', '2022-05-05', 12, 80.00);
