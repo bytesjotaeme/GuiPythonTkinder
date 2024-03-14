@@ -1,5 +1,6 @@
 nombre de la base de datos base_datos1.db
 
+<<<<<<< HEAD
 CREATE TABLE "datos" (
 	"ID"	INTEGER,
 	"NOMBRE"	TEXT,
