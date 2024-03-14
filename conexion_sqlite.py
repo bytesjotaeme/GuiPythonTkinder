@@ -4,10 +4,10 @@ class Comunicacion():
     def __init__(self):
         self.conexion = sqlite3.connect("base_datos1.db")
 
-    def inserta_Datos(self, nombre, edad, correo, telefono, dias_horarios_pedidos, horarios_reparto, productos_servicios, fecha_ingreso, cantidad_pedidos, precio):
+    def inserta_Datos(self, nombre, edad, correo, telefono):
         cursor = self.conexion.cursor()
-        bd = '''INSERT INTO datos (NOMBRE, EDAD, CORREO, TELEFONO, dias_horarios_pedidos, horarios_reparto, productos_servicios, fecha_ingreso, cantidad_pedidos, precio)
-                VALUES('{}','{}', '{}','{}','{}','{}','{}','{}','{}','{}')'''.format(nombre, edad, correo, telefono, dias_horarios_pedidos, horarios_reparto, productos_servicios, fecha_ingreso, cantidad_pedidos, precio)
+        bd = '''INSERT INTO datos (NOMBRE, EDAD, CORREO, TELEFONO)
+                VALUES('{}','{}', '{}','{}')'''.format(nombre, edad, correo, telefono)
         cursor.execute(bd)
         self.conexion.commit()
         cursor.close()
@@ -26,10 +26,11 @@ class Comunicacion():
         self.conexion.commit()
         cursor.close()
 
-    def actualiza_Datos(self, IDE, nombre, edad, correo, telefono, dias_horarios_pedidos, horarios_reparto, productos_servicios, fecha_ingreso, cantidad_pedidos, precio):
+    def actualiza_Datos(self, ID, nombre, edad, correo, telefono):
         cursor = self.conexion.cursor()
-        bd = '''UPDATE datos SET NOMBRE = '{}', EDAD = '{}', CORREO = '{}', TELEFONO = '{}', dias_horarios_pedidos = '{}', horarios_reparto = '{}', productos_servicios = '{}', fecha_ingreso = '{}', cantidad_pedidos = '{}', precio = '{}'
-                WHERE ID = '{}' '''.format(nombre, edad, correo, telefono, dias_horarios_pedidos, horarios_reparto, productos_servicios, fecha_ingreso, cantidad_pedidos, precio, IDE)  
+        bd = '''UPDATE datos SET NOMBRE = '{}', EDAD = '{}', CORREO = '{}', TELEFONO = '{}'
+        WHERE ID = '{}' '''.format(nombre, edad, correo, telefono, ID)
+                  
         cursor.execute(bd)
         dato = cursor.rowcount
         self.conexion.commit()

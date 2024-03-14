@@ -1,0 +1,12 @@
+nombre de la base de datos base_datos1.db
+
+CREATE TABLE "datos" (
+	"ID"	INTEGER,
+	"NOMBRE"	TEXT,
+	"EDAD"	NUMERIC,
+	"CORREO"	TEXT,
+	"TELEFONO"	REAL,
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+
+
